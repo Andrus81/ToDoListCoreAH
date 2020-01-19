@@ -30,10 +30,22 @@ var StateController = {
         });
 
     },
+    Put : (req,res)=>{
+        let id = req.params.id;     
+        
+        stateModel.findByIdAndUpdate(id,{$set: req.body},(err)=>{
+            if(err){
+                res.send(err.message);
+            }else{
+                res.send('Put successfully');
+            }
+            
+        }); 
+     },
 
     Delete : (req,res)=>{
         let userid = req.params.id;
-        userModel.findByIdAndDelete(userid,(err)=>{
+        stateModel.findByIdAndDelete(userid,(err)=>{
             if(err){
                 res.send(err.message);
             }else{
