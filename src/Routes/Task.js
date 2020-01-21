@@ -4,6 +4,7 @@ var route = express.Router();
 var taskController = require('../Controllers/TaskController');
 
 route.get('/Task',taskController.Get); //Route get: List tasks from db
-route.post('/Task',taskController.Post); 
+route.post('/Task',taskController.Post);
+route.put('/Task/:id',taskController.Put);  
 route.delete('/Task/:id',taskController.Delete); 
 module.exports = route;

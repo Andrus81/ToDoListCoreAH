@@ -17,7 +17,15 @@ var TaskSchema=mongoose.Schema({
     maxlength:[120,'the name must be a maximum of 5 characters ']
   },
   userid:String,
-  stateid:String,
+  state: {
+    type: String,
+    enum: ['Open', 'In-Progress','Completed','Archived','ListTasks'],
+    default: 'ListTasks'
+  },
   createDate:{ type:Date, default:Date.now }
+
+
+
+
 });
 module.exports = mongoose.model('Task',TaskSchema);

@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 //const Constants = require('../Utils/Constants');
 
 var UserSchema = mongoose.Schema({
+  
   name:{
         type:String,
         require: [true,'The field name is required'],
