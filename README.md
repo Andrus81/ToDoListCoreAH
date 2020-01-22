@@ -1,11 +1,10 @@
 
 # ToDoListCore
 
-Dynamic Tasks Board, Developed in NodeJs with the framework Express,
-All data  is stored in a NoSql database (MongoDB)_
+_Dynamic Tasks Board, Developed in NodeJs with the framework Express,All data  is stored in a NoSql database (MongoDB)_
 
 ## Configuration and Deployment 🚀
-
+_
 1.	Clone the project
 2.	Download all  dependencies using  the command npm install
 3.	execute the Project using the command node index.js  ori f you downloades nodemon, you can use the npm start command
@@ -15,32 +14,31 @@ All data  is stored in a NoSql database (MongoDB)_
 
 ### Controller 🔧
 
-We have 3 Controllers, 3 
-which correspond to the business logic 
-StateController.js, TaskController.js, UserController.js
-``
-1.  StateController_
+_We have 3 Controllers, 3 which correspond to the business logic 
+StateController.js, TaskController.js, UserController.js_
+
+_1.  StateController_
 
 ```
--Get(/State) - Route get: List of states  from db  
--Post(/State) - Route post: Add new state to db    
--Delete(/State/:id) -  delete: remove state from db    
--Put(/State/:id) -  put: Update state from db
+-Get(/State) - Route get: List of states  from DB  
+-Post(/State) - Route post: Add new state to DB   
+-Delete(/State/:id) -  delete: remove state from DB   
+-Put(/State/:id) -  put: Update state from DB
+```
 
-2.	TaskController_
+_2.	TaskController_
 
 ```
 -Get (/Task) - Route get: List tasks from db
 -Post (/Task) - Route post: Add new task to db
 -Delete (/Task) - Route delete: remove task from db
 -Put (/Task) - Route put: Update task fromdb
--Put (/Task /TaskAssignState/:name) - Route put: Update task fromdb
 -Put (/Task /User/:id) - //Route get: Number of tasks a user has
 
 ```
 
 
-3.	UserController_
+_3.	UserController_
 
 ```
 -Get (/User) - Route get: List users from db    
@@ -48,13 +46,12 @@ StateController.js, TaskController.js, UserController.js
 -Delete (/User/:id) - Route delete: remove user from db    
 -Put (/User/:id) - Route put: Update user fromdb
 
-
 ```
 
 
 ## Built with 🛠️
 
-Mention the tools you used to create your project_
+_Mention the tools you used to create your project_
 
 * [NodeJs](https://nodejs.org/es) 
 * [Exressjs](http://expressjs.com) 
