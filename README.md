@@ -32,8 +32,7 @@ _2.	TaskController_
 -Get (/Task) - Route get: List tasks from db
 -Post (/Task) - Route post: Add new task to db
 -Delete (/Task) - Route delete: remove task from db
--Put (/Task) - Route put: Update task fromdb
--Put (/Task /User/:id) - //Route get: Number of tasks a user has
+-Put (/Task/:id) - Route put: Update task fromdb
 
 ```
 
