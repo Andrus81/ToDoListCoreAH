@@ -1,12 +1,19 @@
 'use strict'
 
 var userModel=require('../Models/User');
+const mongoose = require('mongoose');
 
 var UserController = {
     
+      
         Get : (req,res)=>{
+            let filter={};
             
-            userModel.find({})
+            if(req.query.id!=undefined) {
+                filter._id=mongoose.Types.ObjectId(req.query.id);
+                }
+    
+            userModel.find(filter)
             .then(data=>{
                 res.send(data);
             }).catch(err=>{
@@ -30,6 +37,19 @@ var UserController = {
         });
 
     },
+    
+       Put : (req,res)=>{
+        let id = req.params.id;     
+        
+        userModel.findByIdAndUpdate(id,{$set: req.body},(err)=>{
+            if(err){
+                res.send(err.message);
+            }else{
+                res.send('Put successfully');
+            }
+            
+        }); 
+     },
 
     Delete : (req,res)=>{
         let idUser = req.params.id;

@@ -1,27 +1,22 @@
 'use strict'
 
 let taskModel=require('../Models/Task');
+const mongoose = require('mongoose');
 
 var TaskController = {
-   /* Get : (req,res)=>{
+    Get : (req,res)=>{
+        let filter={};
+        if(req.query.id!=undefined) {
+            filter._id=mongoose.Types.ObjectId(req.query.id);
+            }
 
-        taskModel.find({_id:mongoose.Types.ObjectId(req.query.id)})
+        taskModel.find(filter)
         .then(data=>{
             res.send(data);
         }).catch(err=>{
             res.status(400).send(err.message); 
         });
-    }, */
-        Get : (req,res)=>{
-                
-            taskModel.find({})
-            .then(data=>{
-                res.send(data);
-            }).catch(err=>{
-                res.status(400).send(err.message); 
-            });
-        }, 
-
+    }, 
        //The Post method allows us to store a Task in our database
        Post : (req,res)=>{
         
